@@ -45,7 +45,7 @@ Este projeto foi feito utilizando as seguintes tecnologias:
 
 ```bash
 # Clone o Repositório
-$ git@github.com:tavareshenrique/ignite-reactjs.git
+$ git@github.com:BrunoHenrique00/ignews.git
 ```
 
 ```bash
