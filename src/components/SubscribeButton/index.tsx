@@ -4,11 +4,13 @@ import { api } from '../../services/api';
 import { getStripeJs }  from '../../services/stripe-js';
 import styles from './styles.module.scss'
 
-interface SubscribeButtonProps {
-    priceId: String
+interface ReponseType {
+    data: {
+        sessionId: string
+    }
 }
 
-export default function SubscribeButton({ priceId }: SubscribeButtonProps){
+export default function SubscribeButton(){
     const [session] = useSession()
     const router = useRouter()
 
@@ -24,7 +26,8 @@ export default function SubscribeButton({ priceId }: SubscribeButtonProps){
         }
 
         try {
-            const response = await api.post('/subscribe')
+            const response: ReponseType = await api.post('/subscribe')
+            console.log(response)
 
             const { sessionId } = response.data
             console.log(sessionId)

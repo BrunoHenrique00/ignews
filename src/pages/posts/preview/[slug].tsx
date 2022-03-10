@@ -72,7 +72,7 @@ export const getStaticPaths = () => {
     }
 }
 
-export const getStaticProps: GetStaticProps = async ({ req, params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { slug } = params
 
     const prismic = getPrismicClient()
