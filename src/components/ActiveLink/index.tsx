@@ -5,7 +5,6 @@ import { cloneElement, ReactElement } from 'react'
 interface ActiveLinkProps extends LinkProps {
     children: ReactElement
     activeClassName: string
-    href?: string
 }
 
 export function ActiveLink({children , activeClassName, ...rest}: ActiveLinkProps){
